@@ -4,7 +4,7 @@ import { $HP } from "../Elements/AllDropdwnElements";
 export class HomePage{
 
 OpenUrl(){
-    cy.visit("https://www.amazon.com/");
+    cy.visit("https://www.amazon.in/");
 }
 
 PrintAllDropdownList(){
