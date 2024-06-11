@@ -1,11 +1,12 @@
 import { RegisterPageMercuryTour } from "../Pages/MercuryCountryDropdownPage";
 const RPMT = new RegisterPageMercuryTour
 describe('Mercury Tour Dropdown List', () => {
-    it('should display the selected list of options of country dropdown', () => {
+    it.only('should display the selected list of options of country dropdown', () => {
 
         RPMT.Url();
-        RPMT.PrintSelectCountryList();
-})
+        //RPMT.PrintSelectCountryList();
+        cy.PrintSelectedCountryList("ETHIOPIA")
+    })
 
     it('select all countries in country dropdown', () => {
 
@@ -13,7 +14,7 @@ describe('Mercury Tour Dropdown List', () => {
         RPMT.SelectAllCountries();
 })
 
-    it.only('select one country and verify', () => {
+    it('select one country and verify', () => {
 
     RPMT.Url();
     RPMT.SelecCountryandVerify();
