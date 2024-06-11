@@ -12,24 +12,24 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 
-/*Cypress.Commands.add('PrintSelectedCountryList', (countryname) => {
+Cypress.Commands.add('PrintSelectedCountryList', (countryname) => {
     cy.xpath("//select[@name='country']").find('option').each(($e3, index, $list) => {
         cy.log($e3.text());
         if ($e3.text().includes(countryname)) {
-            break;
+            return false;
         }
     });
-});*/
+});
 
 //cy.xpath("//select[@id='searchDropdownBox']").find('option').each(($e2) =>{
 //cy.log($e2.text());
 
 // Custom command to print the text of all options in a dropdown
-/*Cypress.Commands.add('printDropdownOptions', (dropdownxpath) => {
-    cy.xpath(dropdownxpath).find('a').each(($el, index, $list) => {
+Cypress.Commands.add('printDropdownOptions', (dropdownxpath) => {
+    cy.xpath(dropdownxpath).each(($el, index, $list) => {
         cy.log($el.text());
     })
-});*/
+});
 
 
 //cy.xpath($ALE.yourListsLinksDropdown).find('a').each(($el, index, $list) => {
