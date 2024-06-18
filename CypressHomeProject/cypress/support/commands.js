@@ -32,6 +32,7 @@ Cypress.Commands.add('printDropdownOptions', (dropdownxpath) => {
 });
 
 
+
 //cy.xpath($ALE.yourListsLinksDropdown).find('a').each(($el, index, $list) => {
   //  cy.log($el.text());
 //})
