@@ -1,21 +1,53 @@
-describe('Flight destination Search', () => {
+import { BookingPage } from "../Pages/BookingTicketPage";
 
-    it('flight search', () => {
+//import { bookingElements } from "../Elements/BookingTicketElements";
 
+
+const bookingPage = new BookingPage();
+
+describe('Dummy Ticket Booking', () => {
+  /*before(() => {
+    bookingPage.visit();
+  });
+  beforeEach(() => {
+    cy.fixture('bookingData').then((data) => {
+      this.data = data;
+    });
+  });*/
+  
+
+  it('should book a dummy ticket successfully', () => {
+
+    bookingPage.visit();
+
+    bookingPage.fillBookingForm(
+      'Sai',
+      'Rao',
+      'New York',
+      'Los Angeles',
+      '1234567890',
+      'sai.rao@gmail.com',
+      'Japan',
+      'dsnl 2',
+      '45678',
+      'Hyd'
+      
+    );
+
+    /*bookingPage.fillBookingForm(
+      this.data.firstName,
+      this.data.lastName,
+      this.data.fromCity,
+      this.data.toCity,
+      this.data.phoneNumber,
+      this.data.email,
+      this.data.countryname,
+      this.data.address,
+      this.data.postalno,
+      this.data.cityaddress
+    );*/
 
     
-       /* cy.visit("https://www.makemytrip.com/");
-       
-        cy.xpath("//input[@id='fromCity']").click();
-        cy.xpath("//input[@class='react-autosuggest__input react-autosuggest__input--open']").type('mumbai')
-*/
-
-cy.visit("https://www.expedia.com/Flights")
-cy.xpath("(//button[@class='uitk-fake-input uitk-form-field-trigger'])[1]").click();
-cy.xpath("//input[@id='origin_select']").type('delhi').type({enter});
-
-
-
-        })
-    })
+});
+});
 
