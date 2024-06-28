@@ -5,22 +5,22 @@ import { BookingPage } from "../Pages/BookingTicketPage";
 
 const bookingPage = new BookingPage();
 
-describe('Dummy Ticket Booking', () => {
+describe('Dummy Ticket Booking', function()  {
   /*before(() => {
     bookingPage.visit();
-  });
-  beforeEach(() => {
-    cy.fixture('bookingData').then((data) => {
+  });*/
+  before(function()  {
+    cy.fixture('bookingData').then(function(data)  {
       this.data = data;
     });
-  });*/
+  });
   
 
-  it('should book a dummy ticket successfully', () => {
+  it('should book a dummy ticket successfully', function() {
 
     bookingPage.visit();
 
-    bookingPage.fillBookingForm(
+    /*bookingPage.fillBookingForm(
       'Sai',
       'Rao',
       'New York',
@@ -32,9 +32,9 @@ describe('Dummy Ticket Booking', () => {
       '45678',
       'Hyd'
       
-    );
+    );*/
 
-    /*bookingPage.fillBookingForm(
+    bookingPage.fillBookingForm(
       this.data.firstName,
       this.data.lastName,
       this.data.fromCity,
@@ -45,7 +45,7 @@ describe('Dummy Ticket Booking', () => {
       this.data.address,
       this.data.postalno,
       this.data.cityaddress
-    );*/
+    );
 
     
 });
